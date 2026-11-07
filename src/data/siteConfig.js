@@ -8,6 +8,21 @@ export const site = {
   serviceSummary: 'Tue – Sun, 7 – 11:30 pm',
 };
 
+export const contact = {
+  addressLines: ['Ground Floor, 27 Saffron Lane', 'Bandra West, Mumbai 400050'],
+  // Deliberately invalid number and reserved .example domain so no real person or inbox is contacted.
+  phoneDisplay: '+91 22 0000 0000',
+  phoneHref: 'tel:+912200000000',
+  email: 'reservations@saffronandstone.example',
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=Bandra%20West%2C%20Mumbai',
+};
+
+export const openingHours = [
+  { days: 'Tuesday – Sunday', hours: '7:00 pm – 11:30 pm' },
+  { days: 'Last seating', hours: '10:30 pm' },
+  { days: 'Monday', hours: 'Closed' },
+];
+
 export const navLinks = [
   { id: 'home', label: 'Home' },
   { id: 'story', label: 'Our Story' },

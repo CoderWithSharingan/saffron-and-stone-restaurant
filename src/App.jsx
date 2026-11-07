@@ -1,14 +1,11 @@
+import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Gallery from './components/Gallery';
 import Hero from './components/Hero';
+import Menu from './components/Menu';
 import Navbar from './components/Navbar';
-
-// Temporary Phase 2 anchors so navigation can be tested; replaced by real sections in Phase 3.
-const upcomingSections = [
-  { id: 'story', title: 'Our Story' },
-  { id: 'menu', title: 'Menu' },
-  { id: 'gallery', title: 'Gallery' },
-  { id: 'reservation', title: 'Reservations' },
-  { id: 'contact', title: 'Contact' },
-];
+import Reservation from './components/Reservation';
 
 function App() {
   return (
@@ -19,13 +16,13 @@ function App() {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <Hero />
-        {upcomingSections.map(({ id, title }) => (
-          <section key={id} id={id} className="phase-placeholder" aria-labelledby={`${id}-title`}>
-            <h2 id={`${id}-title`}>{title}</h2>
-            <p>This section will be built in Phase 3.</p>
-          </section>
-        ))}
+        <About />
+        <Menu />
+        <Gallery />
+        <Reservation />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }
