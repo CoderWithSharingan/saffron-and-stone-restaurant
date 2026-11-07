@@ -5,7 +5,7 @@ export const site = {
   established: 2019,
   neighbourhood: 'Bandra West',
   city: 'Mumbai',
-  serviceSummary: 'Tue – Sun, 7 – 11:30 pm',
+  serviceSummary: 'Tue – Sun, 7 – 11:30\u00a0pm',
 };
 
 export const contact = {

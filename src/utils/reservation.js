@@ -2,7 +2,7 @@ import { contact, site } from '../data/siteConfig';
 
 export const MAX_GUESTS = 10;
 export const MAX_REQUEST_LENGTH = 500;
-export const BOOKING_WINDOW_DAYS = 90;
+const BOOKING_WINDOW_DAYS = 90;
 
 export const timeSlots = [
   { value: '19:00', label: '7:00 pm' },
@@ -33,7 +33,7 @@ const PHONE_CHARACTERS = /^\+?[\d\s()-]+$/;
 
 const pad = (value) => String(value).padStart(2, '0');
 
-export function toISODate(date) {
+function toISODate(date) {
   return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
 }
 
@@ -121,7 +121,7 @@ export function validateReservation(values, now = new Date()) {
   }, {});
 }
 
-export function formatReservationDate(value) {
+function formatReservationDate(value) {
   return new Intl.DateTimeFormat('en-IN', {
     weekday: 'long',
     day: 'numeric',
@@ -130,7 +130,7 @@ export function formatReservationDate(value) {
   }).format(parseISODate(value));
 }
 
-export function getTimeLabel(value) {
+function getTimeLabel(value) {
   return timeSlots.find((slot) => slot.value === value)?.label ?? value;
 }
 
