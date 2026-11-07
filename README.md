@@ -4,6 +4,18 @@ A premium, single-page website for **Saffron & Stone**, a fictional contemporary
 
 > **Demo content:** the restaurant, its address, phone number, email, menu, prices and opening hours are fictional and do not represent a real business.
 
+## Features
+
+- Sticky navigation with active-section highlighting and an accessible mobile menu (focus trap, Escape to close, scroll lock)
+- Cinematic hero with responsive WebP images and a subtle entrance animation
+- Editorial About section
+- Filterable menu (All, Starters, Mains, Desserts, Beverages) with prices in INR, driven by `src/data/menuData.js`
+- Asymmetric photo gallery
+- Reservation enquiry form with client-side validation and an honest demo flow (see below)
+- Contact details, opening hours and a Google Maps search link
+- Responsive from 320px to wide desktop, keyboard accessible, visible focus states and `prefers-reduced-motion` support
+- SEO metadata, Open Graph tags and an SVG favicon
+
 ## Tech stack
 
 - React 19 + Vite 8 (JavaScript)
@@ -82,6 +94,9 @@ Photographs depict real dishes and venues, not the fictional restaurant. Dish na
 
 Playfair Display and DM Sans are loaded from Google Fonts (SIL Open Font License).
 
-## Status
+## Known limitations
 
-Work in progress. All sections are implemented; responsive refinement, full QA and final documentation are in progress.
+- Frontend only: there is no booking backend, and the demo email address cannot receive mail.
+- Date and time validation uses the visitor's local clock, not Mumbai time.
+- Open Graph image and canonical URL are not set until a production domain exists.
+- Fonts depend on Google Fonts being reachable.
