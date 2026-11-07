@@ -110,7 +110,7 @@
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 651px) {
   .hero__overlay {
     background:
       linear-gradient(to top, var(--color-bg) 0%, rgba(23, 23, 20, 0) 35%),
@@ -125,6 +125,12 @@
 
   .hero__meta {
     grid-template-columns: repeat(3, max-content);
+    gap: var(--space-4) var(--space-7);
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero__meta {
     gap: var(--space-8);
   }
 }

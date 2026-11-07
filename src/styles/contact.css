@@ -36,7 +36,7 @@
 
 .contact__list a {
   display: inline-block;
-  padding-block: var(--space-1);
+  padding-block: 0.5625rem;
   overflow-wrap: anywhere;
   text-decoration: underline;
   text-decoration-color: rgba(199, 166, 106, 0.6);
@@ -61,6 +61,26 @@
 
 .contact__hours dd {
   color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .contact__map-caption .btn {
+    justify-self: stretch;
+    padding-inline: var(--space-4);
+  }
+}
+
+/* Stack day and hours where the column is too narrow for both on one line. */
+@media (max-width: 420px), (min-width: 651px) and (max-width: 860px) {
+  .contact__hours {
+    gap: var(--space-3);
+  }
+
+  .contact__hours > div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 
 .contact__map {
@@ -142,6 +162,7 @@
 .contact__map-place {
   font-family: var(--font-serif);
   font-size: var(--text-xl);
+  line-height: 1.2;
 }
 
 .contact__map-note {

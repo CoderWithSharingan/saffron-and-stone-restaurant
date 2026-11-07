@@ -1,4 +1,5 @@
 import { ArrowUp } from 'lucide-react';
+import EmailLink from './EmailLink';
 import { contact, navLinks, openingHours, site } from '../data/siteConfig';
 import '../styles/footer.css';
 
@@ -37,7 +38,7 @@ function Footer() {
               <span key={line}>{line}</span>
             ))}
             <a href={contact.phoneHref}>{contact.phoneDisplay}</a>
-            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            <EmailLink />
           </address>
         </div>
 

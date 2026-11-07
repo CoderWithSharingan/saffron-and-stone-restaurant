@@ -35,8 +35,9 @@
 }
 
 .menu__grid {
+  --menu-gap: var(--space-5);
   display: grid;
-  gap: var(--space-5);
+  gap: var(--menu-gap);
 }
 
 .menu__grid > li {
@@ -45,8 +46,11 @@
 
 .menu-card {
   display: grid;
-  grid-template-columns: clamp(5.5rem, 27vw, 8rem) minmax(0, 1fr);
+  grid-template-columns: clamp(4.75rem, 24vw, 7rem) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-4);
   width: 100%;
+  padding: var(--space-4);
   border: 1px solid var(--color-border);
   background-color: var(--color-bg);
   transition: border-color var(--duration) ease;
@@ -59,7 +63,7 @@
 .menu-card__media {
   position: relative;
   overflow: hidden;
-  min-height: 7.5rem;
+  aspect-ratio: 1;
   background-color: var(--color-bg-alt);
 }
 
@@ -101,7 +105,6 @@
   flex-direction: column;
   gap: var(--space-2);
   min-width: 0;
-  padding: var(--space-4);
 }
 
 .menu-card__heading {
@@ -139,19 +142,35 @@
   text-align: center;
 }
 
+@media (max-width: 480px) {
+  .menu__filter {
+    padding: 0 var(--space-4);
+    letter-spacing: 0.1em;
+  }
+}
+
 @media (min-width: 651px) {
   .menu__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  /* Centre a lone final card (e.g. five mains) instead of leaving it left-aligned. */
+  .menu__grid > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - var(--menu-gap)) / 2);
+  }
+
   .menu-card {
     grid-template-columns: none;
     grid-template-rows: auto 1fr;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
   }
 
   .menu-card__media {
     aspect-ratio: 4 / 3;
-    min-height: 0;
   }
 
   .menu-card__body {
@@ -166,7 +185,7 @@
 
 @media (min-width: 1025px) {
   .menu__grid {
-    gap: var(--space-6);
+    --menu-gap: var(--space-6);
   }
 
   .menu-card {

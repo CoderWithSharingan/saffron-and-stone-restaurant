@@ -1,4 +1,5 @@
 import { Clock, Mail, MapPin, Phone, ArrowUpRight } from 'lucide-react';
+import EmailLink from './EmailLink';
 import SectionHeading from './SectionHeading';
 import { contact, openingHours, site } from '../data/siteConfig';
 import '../styles/contact.css';
@@ -38,7 +39,7 @@ function Contact() {
               <Mail size={20} strokeWidth={1.5} aria-hidden="true" />
               <div>
                 <h3>Email</h3>
-                <a href={`mailto:${contact.email}`}>{contact.email}</a>
+                <EmailLink />
               </div>
             </li>
             <li>

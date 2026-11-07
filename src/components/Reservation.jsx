@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, Info, Mail, Pencil } from 'lucide-react';
+import EmailLink from './EmailLink';
 import FormField from './FormField';
 import SectionHeading from './SectionHeading';
 import { contact } from '../data/siteConfig';
@@ -89,7 +90,7 @@ function Reservation() {
             <div>
               <dt>Email</dt>
               <dd>
-                <a href={`mailto:${contact.email}`}>{contact.email}</a>
+                <EmailLink />
               </dd>
             </div>
           </dl>

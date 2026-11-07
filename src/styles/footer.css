@@ -32,21 +32,30 @@
 
 .site-footer__links {
   display: grid;
-  gap: var(--space-1);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--space-5);
+}
+
+@media (min-width: 651px) {
+  .site-footer__links {
+    grid-template-columns: 1fr;
+  }
 }
 
 .site-footer__links a {
-  display: inline-block;
-  padding-block: var(--space-1);
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
 }
 
 .site-footer__column address {
   display: grid;
-  gap: var(--space-1);
+  justify-items: start;
 }
 
 .site-footer__column address a {
-  padding-block: var(--space-1);
+  display: inline-block;
+  padding-block: 0.6875rem;
   overflow-wrap: anywhere;
 }
 

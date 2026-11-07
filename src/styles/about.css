@@ -81,7 +81,7 @@
 
 @media (min-width: 651px) {
   .about__media {
-    margin-inline: auto;
+    max-width: 30rem;
   }
 
   .about__pillars {
@@ -96,6 +96,6 @@
   }
 
   .about__media {
-    margin-inline: 0;
+    max-width: 34rem;
   }
 }

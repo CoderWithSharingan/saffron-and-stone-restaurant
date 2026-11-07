@@ -24,6 +24,8 @@
 }
 
 .brand {
+  display: inline-block;
+  line-height: 2.75rem;
   font-family: var(--font-serif);
   font-size: 1.3125rem;
   letter-spacing: 0.02em;
@@ -130,6 +132,9 @@
 
   .site-nav__link {
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
     padding-block: var(--space-2);
     border-bottom: 0;
     color: var(--color-text-muted);
@@ -143,7 +148,7 @@
   .site-nav__link::after {
     content: '';
     position: absolute;
-    inset: auto 0 0;
+    inset: auto 0 0.5rem;
     height: 1px;
     background-color: var(--color-accent);
     transform: scaleX(0);

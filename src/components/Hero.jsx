@@ -3,6 +3,9 @@ import { images } from '../data/images';
 import { site } from '../data/siteConfig';
 import '../styles/hero.css';
 
+// On screens taller than 3:2 the cover-cropped image renders wider than the viewport.
+const HERO_SIZES = '(max-aspect-ratio: 3/2) 150vh, 100vw';
+
 function Hero() {
   const [imageFailed, setImageFailed] = useState(false);
   const { hero } = images;
@@ -14,7 +17,7 @@ function Hero() {
           className="hero__media"
           src={hero.src}
           srcSet={hero.srcSet}
-          sizes="100vw"
+          sizes={HERO_SIZES}
           width={hero.width}
           height={hero.height}
           alt={hero.alt}

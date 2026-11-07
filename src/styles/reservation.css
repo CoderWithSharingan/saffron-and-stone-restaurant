@@ -35,7 +35,7 @@
 
 .reservation__details a {
   display: inline-block;
-  padding-block: var(--space-1);
+  padding-block: 0.5625rem;
   text-decoration: underline;
   text-decoration-color: rgba(199, 166, 106, 0.6);
   text-underline-offset: 0.25em;
